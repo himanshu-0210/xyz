@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch</title>
+</head>
+<body>
+<h1>StopWatch</h1>
+<label for="stopwatch">Elapsed: </label>
+<span id="stopwatch">0</span><br>
+<button onclick="startTime()">Start</button>
+<button onclick="pauseTime()">Pause</button>
+<button onclick="resetTime()">Stop</button>
+
+<script>
+const stopwatch = document.getElementById("stopwatch");
+let ID = "";
+function updateTime() {
+stopwatch.innerText = parseInt(stopwatch.innerText) + 1;
+}
+function resetTime() {
+stopwatch.innerText = 0;
+clearInterval(ID)
+}
+function pauseTime() {
+clearInterval(ID)
+}
+function startTime() {
+ID = setInterval(updateTime, 1000);
+}
+</script>
+
+<style>
+body {
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+label {
+font-size: 24px;
+}
+span {
+font-size: 36px;
+color: blue;
+}
+button {
+margin-top: 24px;
+font-size: 20px;
+padding: 4px 12px;
+}
+</style>
+</body>
+</html>

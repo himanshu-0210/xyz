@@ -1,0 +1,83 @@
+<div class="content"> 
+    <div class="item frontend"> 
+        <div class="frame"></div> 
+        <div class="title">FRONT-END</div> 
+        <div class="desc">Development</div> 
+    </div> 
+    <div class="item backend"> 
+        <div class="frame"></div> 
+        <div class="title">BACK-END</div> 
+        <div class="desc">Development</div> 
+    </div> 
+    <div class="item fullstack"> 
+        <div class="frame"></div> 
+        <div class="title">FULL-STACK</div> 
+        <div class="desc">Development</div> 
+    </div> 
+</div> 
+ 
+<style> 
+    body, html { 
+        margin: 0; 
+        padding: 0; 
+        height: 100%; 
+        font-family: Arial, Helvetica, sans-serif; 
+    } 
+ 
+    .content { 
+        background: linear-gradient( 
+            45deg,  
+            #8e44e5 0%, 
+            #4e4dec 100%); 
+        margin: auto; 
+        height: 100%; 
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 52px; 
+        border: 1px solid green; 
+    } 
+ 
+    .item { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        min-height: 350px; 
+    } 
+ 
+    .frame { 
+        padding: 100px 80px; 
+        border-radius: 100%; 
+        background-color: red; 
+        border: 12px solid white; 
+        width: fit-content; 
+        margin-bottom: 24px; 
+    } 
+ 
+    .frontend .frame { 
+        background-color: cyan; 
+    } 
+    .fullstack .frame { 
+        background-color: #f6de5d; 
+        padding: 75px 60px 
+    } 
+ 
+    .title { 
+        border-radius: 12px; 
+        background-color: rgba(33, 5, 63, 0.399); 
+        color: white; 
+        font-size: 28px; 
+        padding: 12px 8px; 
+        font-weight: bold; 
+        margin-bottom: 12px; 
+    } 
+    .desc { 
+        color: white; 
+        font-size: 26px; 
+    } 
+    .fullstack .title, .fullstack .desc { 
+        transform: translateY(24px); 
+    }  
+ 
+</style>
